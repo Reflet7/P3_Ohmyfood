@@ -36,9 +36,77 @@ text-align: center;
 
 
 
+/* Le Loader */
 
 
+.loader
+{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.90);
+  animation: loader 1s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
+.loader__Container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  width: 10%;
+}
+
+.loader__Container__item--1
+{
+  border:solid #9356DC;
+  border-width: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  animation-delay: 1.2;
+  animation: ronds 0.2s;
+}
+
+.loader__Container__item--2
+{
+  border:solid #9356DC;
+  border-width: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  animation-delay: 2.6s;
+  animation: ronds 0.2s;
+}
+
+.loader__Container__item--3
+{
+  border:solid #9356DC;
+  border-width: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+  animation-delay: 3s;
+  animation: ronds 0.2s;
+}
+
+ @keyframes loader {
+  100% {
+    opacity: 0;
+    /* z-index: -10; */
+  }
+}  
+
+
+@keyframes ronds {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
 
 header
 {
@@ -271,6 +339,7 @@ button:hover
   margin-right: 15px;
   display: flex;
   flex-direction: column;
+  width:90%
 
 }
 
@@ -283,16 +352,17 @@ button:hover
 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   margin-bottom: 40px;
 }
 
 .Restaurants__bloc__cards
 {
-  height:250px;
-  background-color: #FFFFFF;
-  border-radius: 20px 20px 20px 20px;
-  margin-bottom: 20px;
+    height: 250px;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+    width: 100%;
 
 }
 
@@ -325,7 +395,7 @@ button:hover
 .Restaurant__IMG
 {
   height: 160px;
-  width: 346px;
+  width: 100%;
   border-radius: 20px 20px 0px 0px;
   object-fit: cover;
 }
@@ -549,18 +619,19 @@ footer
 
       
 
-      .Restaurants__bloc__cards 
-      {
-          height: 250px;
-          background-color: #FFFFFF;
-          border-radius: 20px 20px 20px 20px;
-          margin-bottom: 20px;
-          width: 490px;
-      }
+     
+      .Restaurants__bloc__cards {
+        height: 250px;
+        background-color: #FFFFFF;
+        border-radius: 20px 20px 20px 20px;
+        margin-bottom: 20px;
+        width: 45%;
+
+    }
 
       .Restaurant__IMG {
         height: 160px;
-        width: 490px;
+        width: 100%;
         border-radius: 20px 20px 0px 0px;
         object-fit: cover;
       }
